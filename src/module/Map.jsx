@@ -16,9 +16,13 @@ export function Map() {
 let map, infoWindow;
 
 function initMap() {
-  map = new window.google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
+  loader.load().then(async () => {
+    const { Map } = await window.google.maps.importLibrary("maps");
+  
+    map = new Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
   });
   infoWindow = new window.google.maps.InfoWindow();
 
