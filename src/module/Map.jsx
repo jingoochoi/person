@@ -62,7 +62,7 @@ export function Map() {
       infoWindow.open(map,marker)
     }
   };
-  window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
+  // window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
 
   useEffect(() => {
     initMap();
