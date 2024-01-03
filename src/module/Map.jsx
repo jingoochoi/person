@@ -23,7 +23,7 @@ function initMap() {
       center: { lat: -34.397, lng: 150.644 },
       zoom: 8,
     });
-  });
+  }).catch(e=>console.log(e));
   infoWindow = new window.google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
