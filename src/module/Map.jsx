@@ -53,10 +53,10 @@ export function Map() {
       new window.google.maps.Marker({
         position: latLng,
         map: map,
+        title: results[i].name,
       });
     }
   };
-
   useEffect(() => {
     initMap();
     eqfeed_callback();
