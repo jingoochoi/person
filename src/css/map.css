@@ -1,4 +1,4 @@
 html,body{margin: 0;padding: 0;}
 ul,ol{list-style: none;}
 h1{text-align: center;}
-#map{width: 1000px;height: 300px;}
+#map{width: 1000px;height: calc(300px*2);margin: 0 auto;}
