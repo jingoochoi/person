@@ -3,7 +3,7 @@ import '../css/map.css'
 // import { GoogleMap } from '@react-google-maps/api';
 import { Loader } from "@googlemaps/js-api-loader"
 import { useCallback, useEffect, useRef } from 'react';
-
+import mapo from '../data/data.json'
 export function Map() {
   let map,infoWindow
   const initMap = useCallback(() => {
@@ -43,10 +43,24 @@ export function Map() {
       // infoWindow.open(map);
     }
   }, []);
+  const eqfeed_callback = function (results) {
+    results=mapo
+    for (let i = 0; i < results.length; i++) {
+      const coords = results[i].lat;
+      const coords2 = results[i].long;
+      const latLng = new window.google.maps.LatLng(coords, coords2);
+  
+      new window.google.maps.Marker({
+        position: latLng,
+        map: map,
+      });
+    }
+  };
 
   useEffect(() => {
     initMap();
-  }, [initMap]);
+    eqfeed_callback();
+  }, [initMap],[eqfeed_callback]);
     return(
         <>
             <h1>MAP</h1>
