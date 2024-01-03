@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef } from 'react';
 
 export function Map() {
   let map,infoWindow
-  const initMap = useCallback(() => {
+  function initMap ()  {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -23,7 +23,7 @@ export function Map() {
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
         }
-      );
+      )
     } else {
       // Browser doesn't support Geolocation
       handleLocationError(false, infoWindow, map.getCenter());
@@ -41,7 +41,7 @@ export function Map() {
       // );
       // infoWindow.open(map);
     }
-  }, []);
+  };
 
   useEffect(() => {
     initMap();
