@@ -43,9 +43,9 @@ export function Map() {
     }
   };
 
-  useEffect(() => {
+  // useEffect(() => {
     initMap();
-  }, [initMap]);
+  // }, [initMap]);
     return(
         <>
             <h1>MAP</h1>
