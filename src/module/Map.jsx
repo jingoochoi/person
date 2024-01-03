@@ -4,6 +4,7 @@ import '../css/map.css'
 import { Loader } from "@googlemaps/js-api-loader"
 import { useCallback, useEffect, useRef } from 'react';
 import mapo from '../data/data.json'
+import { Marker } from 'react-naver-maps';
 export function Map() {
   let map,infoWindow
   const initMap = useCallback(() => {
@@ -50,13 +51,19 @@ export function Map() {
       const coords2 = results[i].long;
       const latLng = new window.google.maps.LatLng(coords, coords2);
   
-      new window.google.maps.Marker({
+      let marker=new window.google.maps.Marker({
         position: latLng,
         map: map,
         title: results[i].name,
       });
+      infoWindow=new window.google.maps.InfoWindow({
+        content:results[i].name
+      })
+      infoWindow.open(map,marker)
     }
   };
+  window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
+
   useEffect(() => {
     initMap();
     eqfeed_callback();
