@@ -33,7 +33,7 @@ export function Map() {
       zoom: 13,
     });
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
+      // infoWindow.setPosition(pos);
       infoWindow.setContent(
         browserHasGeolocation
           ? "Error: The Geolocation service failed."
