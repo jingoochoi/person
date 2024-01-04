@@ -8,6 +8,7 @@ export function Header() {
             <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
             <h3 onClick={()=>tt.chan('link')}>LINK</h3>
             <h3 onClick={()=>tt.chan('map')}>MAP</h3>
+            <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
         </div>
     )
 }
