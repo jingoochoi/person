@@ -23,7 +23,7 @@ export function Map() {
         },
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
-        }
+        },{enableHighAccuracy:true}
       );
     } else {
       // Browser doesn't support Geolocation

@@ -1,2 +1,5 @@
 .link{display: flex;flex-direction: column;justify-content: center;align-items: center;}
 .link a{margin-top: 100px;color: #000;font-size: 30px;}
+@media screen and (max-width:500px) {
+    .link a{font-size: 20px;}
+}
