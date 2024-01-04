@@ -96,6 +96,7 @@ export function Geocode() {
     return(
         <>
             <h1>GEOCODE</h1>
+            <h3 style={{display:'block',textAlign:'center'}}>※입력 후 지오코드 버튼을 클릭해주세요. 엔터키는 무효합니다.※</h3>
             <div id="map"></div>
         </>
     )

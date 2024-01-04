@@ -71,6 +71,7 @@ export function Map() {
     return(
         <>
             <h1>MAP</h1>
+            <h3 style={{display:'block',textAlign:'center'}}>※알림창 뜰 시 허용해주세요.※</h3>
             <div id="map"></div>
         </>
     )
