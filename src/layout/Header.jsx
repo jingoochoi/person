@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import '../css/header.css'
 import { ctxt } from '../module/context'
-import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
+import { GoogleLogin, GoogleOAuthProvider, googleLogout } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 export function Header() {
     const tt=useContext(ctxt)
@@ -16,8 +16,6 @@ export function Header() {
             {
                 !logg&&<>
             <h3>LOGIN</h3>
-            </>
-            }
             <GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
                 <GoogleLogin onSuccess={(cr)=>{
                     // console.log(cr)
@@ -29,6 +27,18 @@ export function Header() {
                     console.log('error')
                 }}></GoogleLogin>
             </GoogleOAuthProvider>
+            </>
+            }
+            {logg&&<GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
+            <googleLogout
+              clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'
+              buttonText="Logout"
+              onLogoutSuccess={() => {
+                setLogg(false);
+                // 필요한 경우 추가적인 로그아웃 동작 수행
+              }}
+            />
+            </GoogleOAuthProvider>}
         </div>
     )
 }
