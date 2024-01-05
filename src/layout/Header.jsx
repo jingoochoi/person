@@ -1,14 +1,20 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import '../css/header.css'
 import { ctxt } from '../module/context'
 export function Header() {
     const tt=useContext(ctxt)
+    const[logg,setLogg]=useState(false)
+    
     return(
         <div className='head'>
             <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
             <h3 onClick={()=>tt.chan('link')}>LINK</h3>
             <h3 onClick={()=>tt.chan('map')}>MAP</h3>
             <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
+            {
+                !logg&&
+            <h3>LOGIN</h3>
+            }
         </div>
     )
 }
