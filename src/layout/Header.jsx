@@ -19,35 +19,16 @@ export function Header() {
             </>
             }
             <GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
-                {({ signIn, signOut, isSignedIn }) => (
-                  <>
-                    {logg ? (
-                      <googleLogout
-                        clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.           googleusercontent.com'
-                        buttonText="Logout"
-                        onLogoutSuccess={() => {
-                          signOut();
-                          // 필요한 경우 추가적인 로그아웃 동작 수행
-                          setLogg(false)
-                        }}
-                      />
-                    ) : (
-                      <GoogleLogin
-                        clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.           googleusercontent.com'
-                        onSuccess={(cr) => {
-                          let dato = jwtDecode(cr.credential);
-                          // 필요한 경우 추가적인 로그인 동작 수행
-                          signIn()
-                          setLogg(true)
-                        }}
-                        onError={() => {
-                          console.log('error');
-                        }}
-                      />
-                    )}
-                  </>
-                )}
-</GoogleOAuthProvider>
+                <GoogleLogin onSuccess={(cr)=>{
+                    // console.log(cr)
+                    let dato=jwtDecode(cr.credential)
+                    // console.log(dato)
+                    // console.log(dato.alg,dato.kid,dato.typ)
+                    setLogg(true)
+                }} onError={()=>{
+                    console.log('error')
+                }}></GoogleLogin>
+            </GoogleOAuthProvider>
         </div>
     )
 }
