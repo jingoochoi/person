@@ -57,7 +57,8 @@ export function Map() {
         title: results[i].name,
       });
       infoWindow=new window.google.maps.InfoWindow({
-        content:results[i].name
+        content:results[i].name,
+        disableAutoPan:true
       })
       infoWindow.open(map,marker)
     }
