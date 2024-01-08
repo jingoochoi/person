@@ -55,6 +55,7 @@ export function Map() {
         position: latLng,
         map: map,
         title: results[i].name,
+        // icon:'url'
       });
       infoWindow=new window.google.maps.InfoWindow({
         content:results[i].name,
