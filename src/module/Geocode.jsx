@@ -97,7 +97,7 @@ export function Geocode() {
             return results;
           })
           .catch((e) => {
-            alert("Geocode was not successful for the following reason: " + e);
+            alert("다음 이유로 검색에 실패했습니다: " + e);
           });
       }
       const shar=()=>{
