@@ -1,11 +1,16 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import '../css/map.css'
+import mapo from '../data/data.json'
+import { ctxt } from './context';
 export function Geocode() {
     let map;
     let marker;
     let geocoder;
     let responseDiv;
     let response;
+    let latitude;
+    let longitude;
+    const myco=useContext(ctxt)
 
     const initMap = useCallback(() => {
         map = new window.google.maps.Map(document.getElementById("map"), {
@@ -23,7 +28,7 @@ export function Geocode() {
           const submitButton = document.createElement("input");
         
           submitButton.type = "button";
-          submitButton.value = "Geocode";
+          submitButton.value = "Find";
           submitButton.classList.add("button", "button-primary");
         
           const clearButton = document.createElement("input");
@@ -81,15 +86,27 @@ export function Geocode() {
             // map=new window.google.maps.MapO
             marker.setPosition(results[0].geometry.location);
             marker.setMap(map);
+            let loca=JSON.stringify(results[0].geometry.location)
+            latitude=loca.split(':')[1].split(',')[0]
+            longitude=loca.split(':')[2].split('}')[0]
+            // console.log(latitude)
+            // console.log(longitude)
             responseDiv.style.display = "none";
             response.innerText = JSON.stringify(result, null, 2);
+            // console.log(jsonString)
             return results;
           })
           .catch((e) => {
             alert("Geocode was not successful for the following reason: " + e);
           });
       }
-      
+      const shar=()=>{
+        mapo.push({
+          "name":document.querySelector('input[type=text]').value,"lat":latitude,"long":longitude
+        })
+        alert('등록됐습니다')
+        myco.chan('map')
+      }
       useEffect(() => {
         initMap();
       }, [initMap]);
@@ -98,6 +115,7 @@ export function Geocode() {
             <h1>GEOCODE</h1>
             <h3 style={{display:'block',textAlign:'center'}}>※입력 후 지오코드 버튼을 클릭해주세요. 엔터키는 무효합니다.※</h3>
             <div id="map"></div>
+            <button className='button-primary' onClick={shar}>Share</button>
         </>
     )
 }

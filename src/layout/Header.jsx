@@ -13,11 +13,11 @@ export function Header() {
             <h3 onClick={()=>tt.chan('link')}>LINK</h3>
             <h3 onClick={()=>tt.chan('map')}>MAP</h3>
             <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
-            {
+            {/* {
                 !logg&&<>
             <h3>LOGIN</h3>
             </>
-            }
+            } */}
             <GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
                 <GoogleLogin onSuccess={(cr)=>{
                     // console.log(cr)

@@ -14,9 +14,11 @@ function App() {
   }
   return(
     <ctxt.Provider value={{mode,chan}}>
-      <Header></Header>
-      <Mainarea></Mainarea>
-      <Footer></Footer>
+      <div className='lays'>
+        <Header></Header>
+        <Mainarea></Mainarea>
+        <Footer></Footer>
+      </div>
     </ctxt.Provider>
   )
 }
