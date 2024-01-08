@@ -11,13 +11,14 @@ export function Map() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          // eqfeed_callback()
           pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
 
           // infoWindow.setPosition(pos);
-          
+          // eqfeed_callback()
           map.setCenter(pos);
         },
         () => {
@@ -67,8 +68,9 @@ export function Map() {
   useEffect(() => {
     initMap();
     eqfeed_callback();
+    // initMap()
     // map.setCenter(pos)
-  }, [initMap],[eqfeed_callback]);
+  }, [initMap]);
     return(
         <>
             <h1>MAP</h1>
