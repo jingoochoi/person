@@ -6,19 +6,18 @@ import { useCallback, useEffect, useRef } from 'react';
 import mapo from '../data/data.json'
 import { Marker } from 'react-naver-maps';
 export function Map() {
-  let map,infoWindow
+  let map,infoWindow,marker,pos
   const initMap = useCallback(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const pos = {
+          pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
 
           // infoWindow.setPosition(pos);
-          // infoWindow.setContent("Location found.");
-          // infoWindow.open(map);
+          
           map.setCenter(pos);
         },
         () => {
@@ -51,7 +50,7 @@ export function Map() {
       const coords2 = results[i].long;
       const latLng = new window.google.maps.LatLng(coords, coords2);
   
-      let marker=new window.google.maps.Marker({
+      marker=new window.google.maps.Marker({
         position: latLng,
         map: map,
         title: results[i].name,
@@ -59,14 +58,16 @@ export function Map() {
       infoWindow=new window.google.maps.InfoWindow({
         content:results[i].name
       })
-      infoWindow.open(map,marker)
     }
+    // map.setCenter(pos)
+    infoWindow.open(map,marker)
   };
   // window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
 
   useEffect(() => {
     initMap();
     eqfeed_callback();
+    // map.setCenter(pos)
   }, [initMap],[eqfeed_callback]);
     return(
         <>
