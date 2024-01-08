@@ -19,6 +19,7 @@ export function Map() {
 
           // infoWindow.setPosition(pos);
           // eqfeed_callback()
+          console.log(pos)
           map.setCenter(pos);
         },
         () => {
