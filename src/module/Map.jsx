@@ -58,10 +58,10 @@ export function Map() {
       infoWindow=new window.google.maps.InfoWindow({
         content:results[i].name
       })
+      infoWindow.open(map,marker)
     }
     // map.setCenter(pos)
-    infoWindow.open(map,marker)
-  };
+  }
   // window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
 
   useEffect(() => {
