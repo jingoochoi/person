@@ -70,7 +70,7 @@ export function Map() {
     eqfeed_callback();
     // initMap()
     // map.setCenter(pos)
-  }, [initMap]);
+  });
     return(
         <>
             <h1>MAP</h1>
