@@ -18,7 +18,7 @@ export function Header() {
             <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
             {
                 !logg&&<>
-            <h3 class="g-signin2" data-onsuccess={onSignIn}>LOGIN</h3>
+            <h3 className="g-signin2" data-onsuccess={onSignIn}>LOGIN</h3>
             </>
             }
             <GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
