@@ -9,7 +9,18 @@ export function Header() {
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         console.log(profile)
+        // profile.getId()
+        // profile.getName()
+        // profile.getImageUrl()
+        // profile.getEmail()
+        setLogg(true)
     }
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
     return(
         <div className='head'>
             <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
@@ -20,6 +31,10 @@ export function Header() {
                 !logg&&<>
             <h3 className="g-signin2" data-onsuccess={onSignIn}>LOGIN</h3>
             </>
+            }
+            {
+                logg&&
+                <h3 onclick={signOut()}>LOGOUT</h3>
             }
             <GoogleOAuthProvider clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com'>
                 <GoogleLogin onSuccess={(cr)=>{
