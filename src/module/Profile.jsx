@@ -24,7 +24,7 @@ export function Profile() {
             }
             <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>TODAY IS {year}.{mons<10?'0'+mons:mons}.{days<10?'0'+days:days}</h2>
             <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY BIRTHDAY IS 02.06</h2>
-            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY AGE IS {mons>2||mons===2&&days>=6?year-1991:year-1991-1}(international age)</h2>
+            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY AGE IS {mons>2||(mons===2&&days>=6)?year-1991:year-1991-1}(international age)</h2>
             <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY SKILLS: marketing, accounting and web front-end(with react)</h2>
         </>
     )
