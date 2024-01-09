@@ -1,6 +1,6 @@
 html,body{margin: 0;padding: 0;}
 ul,ol{list-style: none;}
-.head{background-color: #ccc;display: flex;justify-content: center;align-items: center;gap: 100px;}
+.head{background-color: #ccc;display: flex;justify-content: center;align-items: center;gap: 30px;}
 h3{display: inline-block;cursor: pointer;}
 @media screen and (max-width:500px) {
     .head{gap: 30px;}
