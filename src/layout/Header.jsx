@@ -16,11 +16,11 @@ export function Header() {
         setLogg(true)
     }
     function signOut() {
-        var auth2 = window.gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log('User signed out.');
-          setLogg(false)
-        });
+        window.gapi.load('auth2', () => {
+            window.gapi.auth2.init({
+              client_id: '471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com',
+            });
+          });
       }
     return(
         <div className='head'>
