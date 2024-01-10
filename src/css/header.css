@@ -1,7 +1,8 @@
 html,body{margin: 0;padding: 0;}
 ul,ol{list-style: none;}
-.head{background-color: #ccc;display: flex;justify-content: center;align-items: center;gap: 30px;}
+.mobi{}
+.head{background-color: #ccc;display: flex;justify-content: center;align-items: center;gap: 30px;flex-direction: column;position: absolute;}
 h3{display: inline-block;cursor: pointer;}
-@media screen and (max-width:500px) {
-    .head{gap: 30px;}
+@media screen and (max-width:600px) {
+    .head{width: 100vw;height: 100vh;}
 }
