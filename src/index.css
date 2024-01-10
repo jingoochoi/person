@@ -11,4 +11,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#root{width: calc(300px*2);margin: 0 auto;position: relative;overflow: hidden;}
+#root{width: calc(300px*2);margin: 0 auto;position: relative;overflow: hidden;min-height: 100vh;}
