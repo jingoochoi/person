@@ -1,8 +1,9 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import '../css/header.css'
 import { ctxt } from '../module/context'
 import { GoogleLogin, GoogleOAuthProvider, googleLogout } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
+import $ from 'jquery'
 export function Header() {
     const tt=useContext(ctxt)
     const[logg,setLogg]=useState(false)
@@ -21,10 +22,18 @@ export function Header() {
               client_id: '471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.apps.googleusercontent.com',
             });
           });
-      }
+    }
+    useEffect(()=>{
+        $('.mobi span').on('click',function () {
+            $('.head').animate({left:0},300)
+        })
+        $('.head h3').on('click',function () {
+            $('.head').animate({left:'-103%'},300)
+        })
+    },[])
     return(
         <>
-            <div className="mobi">≡</div>
+            <div className="mobi"><span>≡</span></div>
             <div className='head'>
                 <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
                 <h3 onClick={()=>tt.chan('link')}>LINK</h3>
