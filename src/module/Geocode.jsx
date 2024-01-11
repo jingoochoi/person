@@ -56,7 +56,7 @@ export function Geocode() {
           map.controls[window.google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
           marker = new window.google.maps.Marker({
             map,
-            draggable:true
+            draggable:false
           });
           map.addListener("click", (e) => {
             geocode({ location: e.latLng });
