@@ -105,7 +105,7 @@ export function Geocode() {
           "name":document.querySelector('input[type=text]').value,"lat":latitude,"long":longitude
         })
         alert('등록됐습니다')
-        myco.chan('map')
+        // myco.chan('map')
       }
       useEffect(() => {
         initMap();
