@@ -16,7 +16,6 @@ export function Map() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
-
           // infoWindow.setPosition(pos);
           // eqfeed_callback()
           map.setCenter(pos);
