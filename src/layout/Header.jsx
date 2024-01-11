@@ -25,10 +25,10 @@ export function Header() {
     }
     useEffect(()=>{
         $('.mobi span').on('click',function () {
-            $('.head').animate({left:0},300)
+            $('.head').toggleClass('on')
         })
         $('.head h3').on('click',function () {
-            $('.head').animate({left:'-103%'},300)
+            $('.head').removeClass('on')
         })
     },[])
     return(
