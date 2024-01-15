@@ -39,7 +39,7 @@ export function Header() {
                     logg&&
                     <h3 onClick={signOut}>LOGOUT</h3>
                 } */}
-                <GoogleOAuthProvider    clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.   apps.googleusercontent.com'>
+                {/* <GoogleOAuthProvider    clientId='471246988772-6ssmcn8qdcasdo1v8kcon3iqg167a3po.   apps.googleusercontent.com'>
                     <GoogleLogin onSuccess={(cr)=>{
                         // console.log(cr)
                         let dato=jwtDecode(cr.credential)
@@ -49,7 +49,7 @@ export function Header() {
                     }} onError={()=>{
                         console.log('error')
                     }}></GoogleLogin>
-                </GoogleOAuthProvider>
+                </GoogleOAuthProvider> */}
             </div>
         </>
     )
