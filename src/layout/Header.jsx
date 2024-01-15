@@ -23,22 +23,13 @@ export function Header() {
             });
           });
     }
-    useEffect(()=>{
-        $('.mobi span').on('click',function () {
-            $('.head').toggleClass('on')
-        })
-        $('.head h3').on('click',function () {
-            $('.head').removeClass('on')
-        })
-    },[])
     return(
         <>
-            <div className="mobi"><span>≡</span></div>
             <div className='head'>
-                <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
+                <h3 onClick={()=>tt.chan('map')}>🏠<br />홈</h3>
                 <h3 onClick={()=>tt.chan('link')}>LINK</h3>
-                <h3 onClick={()=>tt.chan('map')}>MAP</h3>
                 <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
+                <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
                 {/* {
                     !logg&&<>
                 < className="g-signin2" data-onsuccess={onSignIn}>LOGIN</ h3>

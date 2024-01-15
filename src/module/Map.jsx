@@ -75,6 +75,9 @@ export function Map() {
     return(
         <>
             <h1>MAP</h1>
+            <input type="text" style={{width:'500px',border:'1px solid black',borderRadius:'21px'}}/>
+            <span style={{position:'absolute',left:'20px',top:'11vh'}}>🚩</span>
+            <br /><b>리스트 보기</b>
             <h3 style={{display:'block',textAlign:'center'}}>※알림창 뜰 시 허용해주세요.※</h3>
             <div id="map"></div>
         </>

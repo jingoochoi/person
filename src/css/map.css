@@ -1,7 +1,7 @@
 html,body{margin: 0;padding: 0;}
 ul,ol{list-style: none;}
 h1{text-align: center;}
-#map{width: calc(300px*2);height: calc(300px*2);margin: 0 auto;}
+#map{width: calc(300px*2);height: 100vh;margin: 0 auto;}
 @media screen and (max-width:600px) {
     #map{width: 100vw;height: 100vw;}
 }

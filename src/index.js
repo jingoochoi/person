@@ -8,15 +8,15 @@ import { Mainarea } from './layout/Mainarea';
 import { Footer } from './layout/Footer';
 import { ctxt } from './module/context';
 function App() {
-  const[mode,setMode]=useState('pro')
+  const[mode,setMode]=useState('map')
   const chan=(a)=>{
     setMode(a)
   }
   return(
     <ctxt.Provider value={{mode,chan}}>
       <div className='lays'>
-        <Header></Header>
         <Mainarea></Mainarea>
+        <Header></Header>
         <Footer></Footer>
       </div>
     </ctxt.Provider>
