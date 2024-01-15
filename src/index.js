@@ -7,6 +7,7 @@ import { Header } from './layout/Header';
 import { Mainarea } from './layout/Mainarea';
 import { Footer } from './layout/Footer';
 import { ctxt } from './module/context';
+import { Login } from './module/Login';
 function App() {
   const[mode,setMode]=useState('map')
   const chan=(a)=>{
@@ -15,6 +16,7 @@ function App() {
   return(
     <ctxt.Provider value={{mode,chan}}>
       <div className='lays'>
+        <Login></Login>
         <Mainarea></Mainarea>
         <Header></Header>
         <Footer></Footer>

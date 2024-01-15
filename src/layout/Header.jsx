@@ -27,8 +27,9 @@ export function Header() {
         <>
             <div className='head'>
                 <h3 onClick={()=>tt.chan('map')}>🏠<br />홈</h3>
-                <h3 onClick={()=>tt.chan('link')}>LINK</h3>
+                <h3 onClick={()=>tt.chan('link')}>🔖<br />위시</h3>
                 <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
+                <h3 onClick={()=>tt.chan('link')}>📜<br />예약</h3>
                 <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
                 {/* {
                     !logg&&<>
