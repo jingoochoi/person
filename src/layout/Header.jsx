@@ -30,7 +30,7 @@ export function Header() {
                 <h3 onClick={()=>tt.chan('link')}>🔖<br />위시</h3>
                 <h3 onClick={()=>tt.chan('geo')}>GEOCODE</h3>
                 <h3 onClick={()=>tt.chan('link')}>📜<br />예약</h3>
-                <h3 onClick={()=>tt.chan('pro')}>PROFILE</h3>
+                <h3 onClick={()=>tt.chan('pro')}>🙎‍♂️<br />내 정보</h3>
                 {/* {
                     !logg&&<>
                 < className="g-signin2" data-onsuccess={onSignIn}>LOGIN</ h3>

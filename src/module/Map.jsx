@@ -8,7 +8,6 @@ import { Marker } from 'react-naver-maps';
 import { List } from './List';
 export function Map() {
   let map,infoWindow,marker,pos;
-  const [list,setList]=useState(true)
   const initMap = useCallback(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -69,32 +68,18 @@ export function Map() {
   // window.google.maps.event.addListener(Marker,'click',function(){infoWindow.open(map,Marker)})
 
   useEffect(() => {
-    if (!list) {
       initMap();
       eqfeed_callback();
-    }
     // initMap()
     // map.setCenter(pos)
   });
-  const lmap=(a)=>{
-    setList(a)
-  }
     return(
         <>
-            <h1>MAP</h1>
-            <input type="text" style={{width:'500px',border:'1px solid black',borderRadius:'21px'}}/>
-            <span style={{position:'absolute',left:'20px',top:'11vh'}}>🚩</span>
-            {
-              list&&<>
-            <br /><b style={{cursor:'pointer'}} onClick={()=>lmap(false)}>지도로 보기</b>
-            <List></List></>
-            }
-            {
-              !list&&<>
-            <br /><b style={{cursor:'pointer'}} onClick={()=>lmap(true)}>리스트 보기</b>
+            
+            
             <h3 style={{display:'block',textAlign:'center'}}>※알림창 뜰 시 허용해주세요.※</h3>
-            <div id="map"></div></>
-            }
+            <div id="map"></div>
+            
         </>
     )
 }

@@ -4,7 +4,7 @@ ul,ol{list-style: none;}
 .mobi span{cursor: pointer;}
 .head{background-color: #ccc;display: flex;justify-content: space-evenly;align-items: center;position: fixed;width: calc(300px*2);height: 10vh;bottom: 0;}
 /* .head.on{left: 0;} */
-h3{display: inline-block;cursor: pointer;}
+h3{display: inline-block;cursor: pointer;text-align: center;}
 @media screen and (max-width:600px) {
     .head{width: 100vw;}
 }
