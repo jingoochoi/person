@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useLayoutEffect, useState } from 'react'
 import '../css/header.css'
 import { ctxt } from '../module/context'
 import { GoogleLogin, GoogleOAuthProvider, googleLogout } from '@react-oauth/google'
@@ -23,6 +23,14 @@ export function Header() {
             });
           });
     }
+    useLayoutEffect(()=>{
+        $('.head h3').eq(0).css({opacity:1})
+    })
+    useEffect((e)=>{
+        $('.head h3').on('click',function () {
+            $(this).css({opacity:1})
+        })
+    })
     return(
         <>
             <div className='head'>
