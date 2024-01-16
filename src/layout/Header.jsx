@@ -23,12 +23,12 @@ export function Header() {
             });
           });
     }
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         $('.head h3').eq(0).css({opacity:1})
-    })
+    },[])
     useEffect((e)=>{
         $('.head h3').on('click',function () {
-            $(this).css({opacity:1})
+            $(this).css({opacity:1}).siblings().css({opacity:.3})
         })
     })
     return(
