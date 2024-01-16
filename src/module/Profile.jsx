@@ -12,20 +12,19 @@ export function Profile() {
     return(
         <>
             <h1>PROFILE</h1>
-            {
-                name===1&&<div className='bx'>
-                <h2>이름: 최진구</h2>
-                <div className="baka" onClick={()=>mola(0)}>🔁</div></div>
-            }
-            {
-                name===0&&<div className='bx'>
-                <h2>name: tony jingoo choi</h2>
-                <div className="baka" onClick={()=>mola(1)}>🔁</div></div>
-            }
-            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>TODAY IS {year}.{mons<10?'0'+mons:mons}.{days<10?'0'+days:days}</h2>
-            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY BIRTHDAY IS 02.06</h2>
-            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY AGE IS {mons>2||(mons===2&&days>=6)?year-1991:year-1991-1}(international age)</h2>
-            <h2 style={{display:'block',textAlign:'center',marginTop:'100px'}}>MY SKILLS: marketing, accounting and web front-end(with react)</h2>
+            <div className="probx" style={{width:'600px',height:'130px',backgroundColor:'#ccc',display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <img src='https://media.muckrack.com/profile/images/569056/james-jung.png.256x256_q100_crop-smart.png' style={{width:'100px',height:'100px',borderRadius:'50%'}}></img>
+                <div className="name" style={{display:'flex',flexDirection:'column',height:'100px',justifyContent:'space-evenly'}}>
+                    <span>hyundai0203</span>
+                    <span>프로필 수정</span>
+                </div>
+            </div>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>개인정보</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>고객센터</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>설정</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>회원탈퇴</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>로그아웃</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>임대인 모드</h2>
         </>
     )
 }
