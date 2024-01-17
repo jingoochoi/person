@@ -3,3 +3,6 @@ ul,ol{list-style: none;}
 .bx{display: flex;justify-content: center;align-items: center;}
 h2{display: inline-block;margin: 0;}
 .baka{display: inline-block;font-size: 20px;cursor: pointer;}
+@media screen and (max-width:600px) {
+    .probx{width: 100vw;}
+}

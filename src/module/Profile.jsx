@@ -19,12 +19,12 @@ export function Profile() {
                     <span>프로필 수정</span>
                 </div>
             </div>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>개인정보</h2>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>고객센터</h2>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>설정</h2>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>회원탈퇴</h2>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>로그아웃</h2>
-            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'50px'}}>임대인 모드</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>개인정보</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>고객센터</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>설정</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>회원탈퇴</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>로그아웃</h2>
+            <h2 style={{display:'block',textAlign:'left',cursor:'pointer',marginTop:'30px'}}>임대인 모드</h2>
         </>
     )
 }
