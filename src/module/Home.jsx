@@ -9,7 +9,7 @@ export function Home() {
     }    
     return(
         <>
-            <input type="text" style={{width:'500px',border:'1px solid black',borderRadius:'21px'}} placeholder="🚩 위치를 검색해주세요"/>
+            <input type="text" style={{width:'80%',border:'1px solid black',borderRadius:'21px'}} placeholder="🚩 위치를 검색해주세요"/>
             {
               list&&<>
             <br /><b style={{cursor:'pointer'}} onClick={()=>lmap(false)}>지도로 보기</b>

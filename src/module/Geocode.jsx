@@ -24,18 +24,23 @@ export function Geocode() {
         
           inputText.type = "text";
           inputText.placeholder = "주소를 검색해주세요";
+          inputText.style.width='50%'
         
           const submitButton = document.createElement("input");
         
           submitButton.type = "button";
           submitButton.value = "Find";
           submitButton.classList.add("button", "button-primary");
+          submitButton.style.width='13%'
         
           const clearButton = document.createElement("input");
         
           clearButton.type = "button";
           clearButton.value = "Clear";
           clearButton.classList.add("button", "button-secondary");
+          clearButton.style.width='10%'
+          clearButton.style.display='none'
+
           response = document.createElement("pre");
           response.id = "response";
           response.innerText = "";
