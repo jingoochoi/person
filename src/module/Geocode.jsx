@@ -115,7 +115,7 @@ export function Geocode() {
             <h1>GEOCODE</h1>
             <h3 style={{display:'block',textAlign:'center'}}>※입력 후 Find 버튼을 클릭해주세요. 엔터키는 무효합니다.※</h3>
             <div id="map"></div>
-            <button className='button-primary' onClick={shar}>Share</button>
+            <button className='button-primary bottom' onClick={shar}>Share</button>
         </>
     )
 }
