@@ -31,14 +31,16 @@ export function Geocode() {
           submitButton.type = "button";
           submitButton.value = "Find";
           submitButton.classList.add("button", "button-primary");
-          submitButton.style.width='13%'
+          submitButton.style.width='60px'
+          submitButton.style.textAlign='center'
         
           const clearButton = document.createElement("input");
         
           clearButton.type = "button";
           clearButton.value = "Clear";
           clearButton.classList.add("button", "button-secondary");
-          clearButton.style.width='10%'
+          clearButton.style.width='15%'
+          clearButton.style.textAlign='center'
           clearButton.style.display='none'
 
           response = document.createElement("pre");
@@ -56,7 +58,7 @@ export function Geocode() {
           instructionsElement.style.display='none'
           map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(inputText);
           map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(submitButton);
-          map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(clearButton);
+          map.controls[window.google.maps.ControlPosition.LEFT_TOP].push(clearButton);
           map.controls[window.google.maps.ControlPosition.LEFT_TOP].push(instructionsElement);
           map.controls[window.google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
           marker = new window.google.maps.Marker({

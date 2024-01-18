@@ -11,7 +11,6 @@ export function Profile() {
     const days=dt.getDate()
     return(
         <>
-            <h1>PROFILE</h1>
             <div className="probx" style={{width:'100%',height:'130px',backgroundColor:'#ccc',display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <img src='https://media.muckrack.com/profile/images/569056/james-jung.png.256x256_q100_crop-smart.png' style={{width:'100px',height:'100px',borderRadius:'50%'}}></img>
                 <div className="name" style={{display:'flex',flexDirection:'column',height:'100px',justifyContent:'space-evenly'}}>
